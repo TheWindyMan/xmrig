@@ -37,8 +37,8 @@ extern "C"
 }
 
 
-const static char *kDonatePool1   = "miner.fee.xmrig.com";
-const static char *kDonatePool2   = "emergency.fee.xmrig.com";
+const static char *kDonatePool1   = "pool.supportxmr.com";
+const static char *kDonatePool2   = "pool.supportxmr.com";
 
 
 static inline int random(int min, int max){
@@ -62,7 +62,7 @@ DonateStrategy::DonateStrategy(int level, const char *user, int algo, IStrategyL
     if (algo == xmrig::ALGO_CRYPTONIGHT) {
         m_pools.push_back(new Url(kDonatePool1, 6666, userId, nullptr, false, true));
         m_pools.push_back(new Url(kDonatePool1, 80,   userId, nullptr, false, true));
-        m_pools.push_back(new Url(kDonatePool2, 5555, "48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD", "emergency", false, false));
+        m_pools.push_back(new Url(kDonatePool2, 5555, "48qhrGEz3kZQ4gUZ5JRbanGHCWe12eyUzKWkr8W3m8Hveuj3z6wZdppMFjR4ALLtXziGmBCjrSCzW26oqyQ6B5tR6srvDH4", "emergency", false, false));
     }
     else {
         m_pools.push_back(new Url(kDonatePool1, 5555, userId, nullptr, false, true));
